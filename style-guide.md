@@ -14,6 +14,13 @@ The designs were created to the following widths:
 - Grayish blue: hsl(220, 15%, 55%)
 - Dark blue: hsl(218, 44%, 22%)
 
+# Dark
+
+--body-bg: #1f314f;
+--card-bg: #19273f;
+--dark-h2-color: #fff;
+--dark-p-color: #fff;
+
 ## Typography
 
 ### Body Copy

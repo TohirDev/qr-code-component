@@ -1,17 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 
-body {
+:root {
+  --body-bg: #d6e2f0;
+  --card-bg: #fff;
+  --dark-h2-color: #1f3251;
+  --dark-p-color: #7b879d;
+}
+
+.body {
   margin: 0;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: hsl(212, 45%, 89%);
+  background: var(--body-bg);
+}
+
+.body-dark {
+  --body-bg: #1f314f;
+  --card-bg: #19273f;
+  --dark-h2-color: #fff;
+  --dark-p-color: #fff;
 }
 
 .qr-code--component {
-  background: hsl(0, 0%, 100%);
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -33,6 +47,7 @@ body {
   font-family: "Outfit", sans-serif;
   font-weight: 700;
   margin-top: 30px;
+  color: var(--dark-h2-color);
 }
 
 .information p {
@@ -40,5 +55,41 @@ body {
   font-weight: 400;
   margin-top: 10px;
   width: 90%;
+  color: var(--dark-p-color);
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  border: 1px solid #19273f;
+  padding: 15px 30px;
+  color: #19273f;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.toggle-theme:hover {
+  background-color: #19273f;
+  color: #fff;
+  border-color: #fff;
+}
+
+.toggle-theme:active {
   opacity: 0.6;
+}
+
+.body-dark > .toggle-theme {
+  background-color: #19273f;
+  color: #fff;
+  border-color: #fff;
+}
+
+.toggle-theme:hover {
+  background-color: #fff;
+  color: #19273f;
+  border-color: #19273f;
 }
